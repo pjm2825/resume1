@@ -1,0 +1,444 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+body{font-family: 'Abril Fatface', cursive; color:#000;}
+.row {max-width:1200px; margin:0 auto; padding:0 10px;}
+
+/* header 구역 */
+#header { font-family: 'Bangers', cursive;
+    position:fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    z-index: 9999999;
+    background: #fff; 
+    
+}
+#header h1 { padding:15px 0; color:#000; font-size:40px; }
+#header .row {position: relative;}
+#header .nav { position:absolute; top:0; right:0; z-index:9999;
+    font-size:18px; color:#1e1e1e; /* border:1px solid #000; */
+}
+#header .nav .depth > li { float:left; position:relative }
+#header .nav .depth > li > a { 
+    display:block; padding:0px 45px;
+    font-size:20px; text-align:center;
+    font-weight:bold; height:70px; line-height:70px;
+}
+#header .nav .depth > li:hover > a { background: #5eaee4; color:orangered }
+#header .nav .depth > li.on > a { background: #5eaee4; color:orangered }
+
+  
+/* section 구역 */
+/* INTRO 구역 */
+.article1 .slide_group{
+    position: relative;
+}
+.article1 .slide_group .slick-arrow {
+    position: absolute;
+    top:50%; transform:translateY(-50%);
+    background: none; border:none; 
+    font-size:120px; cursor:pointer;
+    color:transparent; transition:all 0.5s;
+}
+.article1 .slide_group .prev { left:50px; z-index:99999; transition:all 0.5s; }
+.article1 .slide_group .next { right:50px; z-index:99999; transition:all 0.5s; }
+.article1 .slide_group:hover .prev { left:100px; color:#fff; }
+.article1 .slide_group:hover .next { right:100px; color:#fff }
+.article1 .slide_group .slick-dots {
+    position:absolute; bottom:50px; left:50%; transform:translate(-50%);
+}
+.article1 .slide_group .slick-dots li {
+    display: inline-block; margin:0 5px;
+    width:100px; height:2px; background:#999;
+    position: relative;
+}
+.article1 .slide_group .slick-dots li button {
+    width:0px; height:2px;
+    background:red;
+    border:none; text-indent:-9999px; overflow: hidden;
+    outline:none;
+    position:absolute; top:0; left:0;
+}
+.article1 .slide_group .slick-dots li.slick-active button {
+    animation:barani 4s both; 
+}
+@keyframes barani {
+    0% { width:0px }
+    100% { width:100px;}
+}
+.article1 .playstop {
+    font-size:15px; color:#fff; 
+    background:none; 
+    position:absolute; bottom:65px;
+    left:50%; margin-left:180px;
+}
+ .article1 .slide_group .slide1 {
+    height:950px; 
+    background:url(../img/KakaoTalk_20210128_005859471.jpg) no-repeat center;
+    background-size:cover; 
+    position:relative;
+ }
+.article1 .slide_group .slide2 {
+    height:950px; 
+    background:url(../img/KakaoTalk_20210128_010608548.jpg) no-repeat center;
+    background-size:cover; 
+    position:relative;
+ }
+.article1 .slide_group .slide3 {
+    height:950px; 
+    background:url(../img/KakaoTalk_20210128_010659935.jpg) no-repeat center;
+    background-size:cover; 
+    position:relative;
+ }
+.article1 .slide_group .slide .txt {  
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%, -50%);
+    text-align:center;
+    padding-top:100px;
+
+}
+.article1 .slide_group .slide.slick-cloned .txt { opacity:0; }
+.article1 .slide_group .slide .txt h2 { 
+    font-size:60px; font-weight:bold; 
+    text-shadow:0px 0px 4px #fff;
+    margin-bottom:20px;
+    color:orange;
+    font-family:'Monoton', cursive;
+}
+.article1 .slide_group .slide.slick-active .txt h2 {
+    animation:fadeInDown 0.5s both 0.6s;
+}
+.article1 .slide_group .slide .txt h3 { 
+    font-size:130px; line-height:1.8;
+    font-weight:bold; 
+    text-shadow:0px 0px 4px #fff;
+    color:yellowgreen;
+    font-family:'Monoton', cursive;
+}
+.article1 .slide_group .slide.slick-active .txt h3 {
+    animation:fadeInUp 0.5s both 0.6s;
+}
+.article1 .slide_group .slide .txt p { 
+    font-size:30px; line-height:1.8;
+    font-weight:bold; 
+    text-shadow:0px 0px 4px #000;
+    color:#fff;
+    letter-spacing:-2px;
+    font-family:'Monoton', cursive;
+}
+.article1 .slide_group .slide.slick-active .txt p {
+    animation:fadeInUp 0.5s both 1.2s;
+}
+.article1 .slide_group .slide .txt strong {
+    margin-left:20px; font-size:45px;
+    color: blue;
+    font-family:'Arial', 'Helvetica', sans-serif;
+}
+
+/* ABOUT ME 구역 */
+.article2 { padding-top:50px; padding-bottom:61px ;
+}
+#section .title2 { text-align: center; margin-top:30px;
+    color: #000; font-size: 48px;
+    font-weight: 700; line-height: 50px;
+    position:relative; 
+}
+#section .title2::before { 
+    content:'';
+    width:100px; height:3px; background:orangered;
+    position:absolute; top:-10px; 
+    left:50%; transform:translate(-50%);
+}
+#section .comment {
+    text-align:center; 
+    margin-top:50px; margin-bottom:50px;
+    color: #000;
+    font-size: 28px; font-weight:700;
+    line-height:2; 
+}
+.article2 > p { font-size:24px; }
+.article2 ul li {
+    float:left;
+    width:32%;
+    text-align:center;
+    margin-right:1%;
+    
+}
+.article2 ul li i {
+    margin: auto;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    font-size: 70px;
+    line-height: 170px;
+    border: 1px solid #397dda;
+    margin-bottom: 16px;
+    color: #397dda
+}
+.article2 ul li:hover {
+    transform:scale(1.1);
+}
+.article2 ul li:hover i {
+    color:paleturquoise;
+}
+.article2 ul li h3 { font-size:28px; 
+    font-weight:500;
+    color:#4d4d4d;
+    margin:15px;
+}
+.article2 ul li p { font-size:18px; 
+    font-weight:500;
+    color:#4d4d4d;
+}
+.article2 .about_detail {
+    margin-left:170px;
+}
+.article2 .about_detail > h2 {
+    display:inline-block;
+    font-size: 30px;
+    padding: 10px 0 15px;
+    border-bottom: 1px dashed #000;
+    margin-top:50px; width:87%;
+    animation:bounce 2s both 1s;
+}
+.article2 .about_detail p {
+    font-size: 17px;
+    padding: 0 5px;
+    margin-top: 5px;
+    animation:fadeInLeft 2s both 1s;
+}
+.article2 .about_detail p:nth-of-type(1) i {
+    color:#f51;
+    font-size:22px;
+}
+.article2 .about_detail p:nth-of-type(3) i {
+    color:#f51;
+    font-size:22px;
+}
+.article2 .about_detail p:nth-of-type(5) i {
+    color:#f51;
+    font-size:22px;
+}
+.article2 .about_detail p:nth-of-type(8) i {
+    color:#f51;
+    font-size:22px;
+}
+
+/* SKILL 구역 */
+.article3 { height:100%;
+    background:url(../img/open_book_hires.JPG) no-repeat center;
+    background-size:cover; position: relative;
+    padding-top:50px; padding-bottom:300px;
+}
+.article3 .title3 { text-align: center; 
+    color: #000; font-size: 48px;
+    font-weight: 700; line-height: 50px;
+    position:relative; margin-top: 30px;
+}
+.article3 .title3::before { 
+    content:'';
+    width:100px; height:3px; background:orangered;
+    position:absolute; top:-10px; 
+    left:50%; transform:translate(-50%);
+}
+.article3 .skill { padding-bottom:50px }
+.article3 .skill .score {
+    color: #333;
+    font-size: 20px;
+    line-height: 40px;
+    height: 40px;
+    width: 100%;
+    margin: 50px 0 0;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+.article3 .myscore { position: relative;}
+.article3 .skill p { position:absolute; right:0; top:0;}
+.article3 .html .myscore {
+    background: #E0BBE4;
+    width:0%;
+}
+.article3 .css .myscore {
+    background: #957DAD;
+    width:0%;
+}
+.article3 .script .myscore {
+    background: #D291BC;
+    width:0%;
+}
+.article3 .jquery .myscore {
+    background: #FEC8D8;
+    width:0%;
+}
+.article3 .react .myscore {
+    background:#FFDFD3;
+    width:0%;
+}
+
+
+
+#section .article3 .comment { height:300px;
+    background:url(../img/duomo-s-maria-del-fiore-and-palazzo-vecchio-in-the-evening-florence-italy-picjumbo-com.jpg) no-repeat center;
+    background-size:cover;
+    background-attachment: fixed; /* 패럴렉스 이미지 : 스크롤시 배경이미지 고정스타일 */
+    position:absolute; bottom:0; width:100%; text-align:center;
+    margin:0; 
+}
+.article3 .comment p { color:#fff !important;
+    text-align:center;
+    font-size:50px; font-weight:700;}
+
+
+/* PORTFOLIO 구역 */
+.article5 { padding-top:50px; margin-bottom:50px; }
+.article5 .title4 { text-align: center; 
+    color: #000; font-size: 48px;
+    font-weight: 700; line-height: 50px;
+    position:relative; 
+}
+.article5 .title4::before { 
+    content:'';
+    width:100px; height:3px; background:orangered;
+    position:absolute; top:-10px; 
+    left:50%; transform:translate(-50%);
+}
+.portfolio { height:100%; margin-top:60px; }
+.portfolio ul.gallery { height:calc(100% - 120px); margin-top:60px; }
+.portfolio ul.gallery li { 
+    float:left; 
+    width:32%;  
+    overflow:hidden; 
+    margin-left:1%;
+}
+.portfolio ul.gallery li img { padding:20px 10px; }
+.portfolio ul.gallery li img:hover { transform:scale(1.5);}
+
+/* CONTACT ME 구역 */
+.article6 { padding-top:50px; padding-bottom:60px ; }
+.article6 .title5 { text-align: center; 
+    color: #000; font-size: 48px;
+    font-weight: 700; line-height: 50px;
+    position:relative; margin-top: 20px;
+}
+.article6 .title5::before { 
+    content:'';
+    width:100px; height:3px; background:orangered;
+    position:absolute; top:-10px; 
+    left:50%; transform:translate(-50%);
+}
+.article6 { /* height:750px; */
+    background:url(../img/juan-manuel-vargas-BZAejWYS9Bw-unsplash.jpg) no-repeat center;
+    background-size:cover;
+    color:#fff;
+    text-align:center;
+    position: relative;
+}
+#contact { padding-top:80px; }
+#contact .form1 {
+    width:80%; /* border:1px solid #000; */
+    margin:50px auto 0; text-align:left;
+}
+#contact .form1 label {
+    width:150px; display:inline-block;
+    vertical-align:middle; font-weight:bold;
+}
+#contact .form1 p:nth-of-type(4) label {
+    vertical-align:top;
+}
+#contact .form1 input {
+    border:1px solid #999;
+    padding:10px 5px;
+    vertical-align:middle;
+}
+#contact .form1 input[type=file] {
+    border:none;
+}
+#contact .form1 p {
+    padding:15px 0; font-size: 20px;
+}
+#contact .form1 #memo {
+    width:calc(90% - 150px);
+    height:150px;
+}
+/* #contact .form1 p:nth-of-type(6) {
+    text-align:center;
+} */
+#contact .form1 p:nth-of-type(6) button {
+    padding:10px 20px; font-size:20px;
+    margin:0 10px; border-radius:5px;
+}
+#contact .form1 p:nth-of-type(6) button[type=submit] {
+    background:#fff;
+}
+#contact .form1 p:nth-of-type(6) button[type=reset] {
+    background:#fff;
+}
+#contact .form1 p:nth-of-type(6) button[type=submit]:hover {
+    background:rgba(250, 78, 78, 0.5);
+}
+#contact .form1 p:nth-of-type(6) button[type=reset]:hover {
+    background:rgb(26, 204, 228);
+}
+#contact ::placeholder {
+    color:red; font-size:15px;
+}
+
+/* TOP 구역 */
+.gotop {
+    position: fixed;
+    bottom: 10%; right: 10%;
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+    width: 42px; height: 42px;
+    text-align: center; line-height: 42px;
+    font-size: 12px;
+    opacity:0; transition:all 0.5s;
+}
+.gotop.on { opacity:1; }
+.gotop a { display:block; }
+.gotop a:hover {background: orange;}
+
+/* 로딩인트로1 */
+.introAni { 
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: #fff; z-index:99999999; 
+}
+.introAni .box {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: orangered;
+}
+.introAni .box p:nth-of-type(2) {
+    color: #333;
+    font-size: 50px;
+    margin: 10px 0;
+}
+.introAni .box .bar {
+    height: 5px; 
+    width: 250px; margin: 10px auto 0;
+}
+.introAni .box .barani {
+    width: 0%;
+    height: 5px;
+    background: orangered;
+}
+
+/* 로딩인트로2 */
+.introBox {
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: #fff; z-index:99999999; 
+}
+.introBox i {
+    font-size:80px;
+    position:absolute;
+    top:50%; transform:translate(-50%, -50%);
+    left:50%; 
+}
